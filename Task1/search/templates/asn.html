@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{%block content%}
+<table class="table table-striped">
+    <tr>
+        <th>Prefixes</th>
+        <th>start Time</th>
+        <th>End TIme</th>
+    </tr>
+
+    {% for data in response.data.prefixes %}
+
+    <tr>
+        <td>{{data.prefix}}</td>
+        <td>{{data.timelines.0.starttime}}</td>
+        <td>{{data.timelines.0.endtime}}</td>
+        {% endfor %}
+
+</table>
+
+{% endblock %}
