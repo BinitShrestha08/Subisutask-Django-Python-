@@ -12,7 +12,7 @@
     {% for data in response.data.prefixes %}
 
     <tr>
-        <td>{{forloop.counter0}}</td>
+        <td>{{forloop.counter}}</td>
         <td>{{data.prefix}}</td>
         <td>{{data.timelines.0.starttime}}</td>
         <td>{{data.timelines.0.endtime}}</td>
