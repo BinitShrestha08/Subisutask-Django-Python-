@@ -42,8 +42,7 @@ with open(filename) as fh:
                 dict2[fields[2]] = description[4]
                 dict2[fields[3]] = description[5]
             i = i + 1
-        # appending the record of each employee to
-        # the main dictionary
+        # appending the record of each data to the main dictionary
         dict1[sno] = dict2
         l = l + 1
 

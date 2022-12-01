@@ -3,6 +3,7 @@
 {%block content%}
 <table class="table table-striped">
     <tr>
+        <th>SN</th>
         <th>Prefixes</th>
         <th>start Time</th>
         <th>End TIme</th>
@@ -11,6 +12,7 @@
     {% for data in response.data.prefixes %}
 
     <tr>
+        <td>{{forloop.counter0}}</td>
         <td>{{data.prefix}}</td>
         <td>{{data.timelines.0.starttime}}</td>
         <td>{{data.timelines.0.endtime}}</td>
