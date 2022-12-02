@@ -19,9 +19,9 @@ with open(filename) as fh:
         description = list(line.strip().split(None, 5))
 
         # for output see below
-        # print(description)
+        print("Description",description)
         # for automatic creation of id for each data
-        sno = 'data' + str(l)
+        id = 'data' + str(l)
 
         # loop variable
         i = 0
@@ -37,13 +37,13 @@ with open(filename) as fh:
                 j=j+1
             else:
                 dict2[fields[0]] = timestamp
-                timestamp = ""
+                timestamp = "" #emptying timestamp so it does get added more
                 dict2[fields[1]] = description[3]
                 dict2[fields[2]] = description[4]
                 dict2[fields[3]] = description[5]
             i = i + 1
         # appending the record of each data to the main dictionary
-        dict1[sno] = dict2
+        dict1[id] = dict2
         l = l + 1
 
     # print(dict1)
