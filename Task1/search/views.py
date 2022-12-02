@@ -1,3 +1,5 @@
+# views are functions that takes http requests and returns http response
+
 from django.shortcuts import render
 import requests
 
